@@ -71,6 +71,17 @@ const gitRemote = async () => {
   run(`${type} ${input}`)
 }
 
+const gitMerge = async () => {
+  const { input } = await inquirer.prompt([
+    {
+      type: "input",
+      name: "input",
+      message: lolcat.fromString("merged branch name:")
+    }
+  ])
+  run(`git merge --no-ff ${input}`)
+}
+
 const list = async () => {
   const { git } = await inquirer.prompt([
     {
@@ -107,7 +118,7 @@ const list = async () => {
       gitRemote()
       break
     case "git merge --no-ff":
-      run(git)
+      gitMerge()
   }
 }
 

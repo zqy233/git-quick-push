@@ -1,7 +1,5 @@
 ## [EN](https://github.com/zqy233/git-quick-push/blob/master/README.md) | 中文
 
-> 需要 node 版本 12.20.0 || 14.13.1 || >=16.0.0
-
 目前有两个命令
 
 - list，显示 git 命令列表，通过列表选择的方式来使 git 提交更方便

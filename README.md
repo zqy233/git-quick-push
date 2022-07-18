@@ -1,7 +1,5 @@
 ## EN | [中文](https://github.com/zqy233/git-quick-push/blob/master/README-CN.md)
 
-> required node version 12.20.0 || 14.13.1 || >=16.0.0
-
 two commands now
 
 - list，display a list of git submissions commands, make git submissions more convenient through list selection

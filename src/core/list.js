@@ -91,7 +91,7 @@ const list = async () => {
     case "git branch":
       run(git)
       break
-    case "git checkout -b":
+    case "git checkout":
       gitCheckout()
       break
     case "git pull":

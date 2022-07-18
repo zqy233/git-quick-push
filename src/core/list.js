@@ -11,6 +11,14 @@ const run = command => {
   list()
 }
 const gitCheckout = async () => {
+  const { type } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "type",
+      message: lolcat.fromString("please select the command"),
+      choices: ["git checkout", "git checkout -b"]
+    }
+  ])
   const { input } = await inquirer.prompt([
     {
       type: "input",
@@ -18,7 +26,7 @@ const gitCheckout = async () => {
       message: lolcat.fromString("input branch name :")
     }
   ])
-  run(`git checkout -b ${input}`)
+  run(`${type} ${input}`)
 }
 
 const gitCommit = async () => {
@@ -69,7 +77,7 @@ const list = async () => {
       type: "list",
       name: "git",
       message: lolcat.fromString("please choose git commands"),
-      choices: ["git init", "git branch", "git checkout -b", "git remote", "git commit", "git pull", "git push", "git merge --no-ff"]
+      choices: ["git init", "git branch", "git checkout", "git remote", "git commit", "git pull", "git push", "git merge --no-ff"]
     }
   ])
   if (!shell.which("git")) {

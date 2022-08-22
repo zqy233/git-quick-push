@@ -1,7 +1,7 @@
 {
   "name": "git-quick-push",
   "description": "node script for git commands",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "author": "zhuzhuxiaggboy",
   "private": false,
   "license": "MIT",

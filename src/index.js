@@ -20,4 +20,4 @@ program
     create()
   })
 
-program.version("1.0.21").parse(process.argv)
+program.version("1.0.22").parse(process.argv)

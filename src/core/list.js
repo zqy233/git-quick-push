@@ -71,6 +71,28 @@ const gitRemote = async () => {
   run(`${type} ${input}`)
 }
 
+const gitPush = async () => {
+  const { type } = await inquirer.prompt([
+    {
+      type: "list",
+      name: "type",
+      message: lolcat.fromString("select remote command"),
+      choices: ["git push -u", "git push"]
+    }
+  ])
+  if (type === "git push") {
+    return run(type)
+  }
+  const { input } = await inquirer.prompt([
+    {
+      type: "input",
+      name: "input",
+      message: lolcat.fromString("repository name and branch name:")
+    }
+  ])
+  run(`${type} ${input}`)
+}
+
 const gitMerge = async () => {
   const { input } = await inquirer.prompt([
     {
@@ -88,7 +110,7 @@ const list = async () => {
       type: "list",
       name: "git",
       message: lolcat.fromString("please choose git commands"),
-      choices: ["git init", "git branch", "git checkout", "git remote", "git commit", "git pull", "git push", "git merge --no-ff"]
+      choices: ["git init", "git branch", "git checkout", "git remote", "git commit", "git pull --rebase", "git push", "git merge --no-ff"]
     }
   ])
   if (!shell.which("git")) {
@@ -105,11 +127,11 @@ const list = async () => {
     case "git checkout":
       gitCheckout()
       break
-    case "git pull":
+    case "git pull --rebase":
       run(git)
       break
     case "git push":
-      run(git)
+      gitPush()
       break
     case "git commit":
       gitCommit()

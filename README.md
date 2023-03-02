@@ -1,31 +1,8 @@
 ## EN | [中文](https://github.com/zqy233/git-quick-push/blob/master/README-CN.md)
 
-two commands now
+> [Node.js](https://nodejs.org/en/) script for git commit, add emoji specification prefix to git commit message
 
-- list，display a list of git submissions commands, make git submissions more convenient through list selection
-- create，provide vite + vue3 + ts + pinia template , download dependency automatically (see template readme.md for specific configuration)
-
-## 🎉 install
-
-```bash
-npm i -g git-quick-push
-```
-
-## ✨ usage
-
-Note that the command is "git-push" instead of the package name "git-quick-push". Because "git-quick-push" is slightly longer, the design is abbreviated as "git-push"
-
-### ✨git-push list
-
-show "git commit" ，"git pull ", "git push" and "exit"
-
-#### 🚀 If you think the default text of commit is not specific enough
-
-You can input custom commit text, which will splice the default text of the commit list
-
-#### 🚀 Automatically provide corresponding Emoji for commit text
-
-| emoji | emoji 代码   | commit                                  |
+| emoji | emoji        | commit message                          |
 | ----- | ------------ | --------------------------------------- |
 | 🎉    | `:tada:`     | first commit :                          |
 | ✨    | `:sparkles:` | new feature :                           |
@@ -36,8 +13,18 @@ You can input custom commit text, which will splice the default text of the comm
 | ⚡    | `:zap:`      | improve performance :                   |
 | 📝    | `:memo:`     | document writing :                      |
 
-### ✨git-push create
+## Usage
 
-Input the project name, create the vite + vue3 + ts + pinia template to the current directory, download the dependency and run
+```bash
+npm i -g git-quick-push
+```
 
-If there is a folder in the current directory with the same name as the created project name, provide an overwrite prompt
+```bash
+git-push list
+```
+
+After select `git commit`, the list of supported emoji specification prefixes will be displayed
+
+## Note
+
+it will run `git add .` every time after you choose the emoji specification prefix

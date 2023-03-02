@@ -1,9 +1,9 @@
 import { Command } from 'commander'
-// const showLogo = require('./showLogo')
+import showLogo from './showLogo'
 import list from './list'
 
 // show a beautiful logo "git-quick-push"
-// showLogo()
+showLogo()
 const program = new Command()
 program
   .command('list')

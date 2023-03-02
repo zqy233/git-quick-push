@@ -23,4 +23,6 @@ npm i -g git-quick-push
 git-push list
 ```
 
-在选择了git commit后，会显示支持的emoji规范前缀列表
+## 注意
+
+在选择了emoji规范前缀后会脚本会直接执行`git add .` 和`git commit`

@@ -1,6 +1,6 @@
 {
   "name": "git-quick-push",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "node script for git commands",
   "author": "zhuzhuxiaggboy",
   "private": false,

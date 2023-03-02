@@ -1,7 +1,7 @@
-const figlet = require("figlet")
-const lolcat = require("@darkobits/lolcatjs")
+import figlet from "figlet"
+import inquirer from "inquirer"
 
-function showLogo() {
+function showLogo () {
   const text = figlet.textSync("git-quick-push")
   const textColor = lolcat.fromString(text)
   console.log(textColor)

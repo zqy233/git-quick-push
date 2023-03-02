@@ -1,8 +1,8 @@
-const ora = require("ora")
-const shell = require("shelljs")
-const lolcat = require("@darkobits/lolcatjs")
-const inquirer = require("inquirer")
-const { emojiArr, commitArr } = require("../choices")
+import ora from 'ora';
+import shell from 'shelljs';
+import lolcat from '@darkobits/lolcatjs';
+import inquirer from "inquirer"
+import { emojiArr, commitArr } from "./choices"
 
 const run = command => {
   const loading = ora("").start()
@@ -16,15 +16,15 @@ const gitCheckout = async () => {
       type: "list",
       name: "type",
       message: lolcat.fromString("please select the command"),
-      choices: ["git checkout", "git checkout -b"]
-    }
+      choices: ["git checkout", "git checkout -b"],
+    },
   ])
   const { input } = await inquirer.prompt([
     {
       type: "input",
       name: "input",
-      message: lolcat.fromString("input branch name :")
-    }
+      message: lolcat.fromString("input branch name :"),
+    },
   ])
   run(`${type} ${input}`)
 }
@@ -36,15 +36,15 @@ const gitCommit = async () => {
       type: "list",
       name: "type",
       message: lolcat.fromString("please select the commit category"),
-      choices: commitArr
-    }
+      choices: commitArr,
+    },
   ])
   const { input } = await inquirer.prompt([
     {
       type: "input",
       name: "input",
-      message: lolcat.fromString("full details :")
-    }
+      message: lolcat.fromString("full details :"),
+    },
   ])
   run(`git commit -m "${emojiArr[commitArr.indexOf(type)]}${input ? type + ": " + input : type}"`)
 }
@@ -55,8 +55,8 @@ const gitRemote = async () => {
       type: "list",
       name: "type",
       message: lolcat.fromString("select remote command"),
-      choices: ["git remote -v", "git remote add origin", "git remote set-url origin"]
-    }
+      choices: ["git remote -v", "git remote add origin", "git remote set-url origin"],
+    },
   ])
   if (type === "git remote -v") {
     return run(type)
@@ -65,8 +65,8 @@ const gitRemote = async () => {
     {
       type: "input",
       name: "input",
-      message: lolcat.fromString("repository url:")
-    }
+      message: lolcat.fromString("repository url:"),
+    },
   ])
   run(`${type} ${input}`)
 }
@@ -76,9 +76,9 @@ const gitPush = async () => {
     {
       type: "list",
       name: "type",
-      message: lolcat.fromString("select remote command"),
-      choices: ["git push -u", "git push"]
-    }
+      message: lolcat.fromString("select push command"),
+      choices: ["git push -u", "git push"],
+    },
   ])
   if (type === "git push") {
     return run(type)
@@ -87,8 +87,8 @@ const gitPush = async () => {
     {
       type: "input",
       name: "input",
-      message: lolcat.fromString("repository name and branch name:")
-    }
+      message: lolcat.fromString("repository name and branch name:"),
+    },
   ])
   run(`${type} ${input}`)
 }
@@ -98,8 +98,8 @@ const gitMerge = async () => {
     {
       type: "input",
       name: "input",
-      message: lolcat.fromString("merged branch name:")
-    }
+      message: lolcat.fromString("merged branch name:"),
+    },
   ])
   run(`git merge --no-ff ${input}`)
 }
@@ -110,8 +110,8 @@ const list = async () => {
       type: "list",
       name: "git",
       message: lolcat.fromString("please choose git commands"),
-      choices: ["git init", "git branch", "git checkout", "git remote", "git commit", "git pull --rebase", "git push", "git merge --no-ff"]
-    }
+      choices: ["git init", "git branch", "git checkout", "git remote", "git commit", "git pull", "git push", "git merge --no-ff"],
+    },
   ])
   if (!shell.which("git")) {
     shell.echo("Sorry, you need download git first")
@@ -127,7 +127,7 @@ const list = async () => {
     case "git checkout":
       gitCheckout()
       break
-    case "git pull --rebase":
+    case "git pull":
       run(git)
       break
     case "git push":
@@ -144,4 +144,4 @@ const list = async () => {
   }
 }
 
-module.exports = list
+export default list

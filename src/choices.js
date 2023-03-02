@@ -34,4 +34,4 @@ const choices = [
 ]
 const emojiArr = choices.map(item => item.emoji)
 const commitArr = choices.map(item => item.commit)
-module.exports = { emojiArr, commitArr }
+export { emojiArr, commitArr }

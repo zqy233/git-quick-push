@@ -4,7 +4,7 @@ import lolcat from '@darkobits/lolcatjs'
 import inquirer from 'inquirer'
 import { emojiArr, commitArr } from './choices'
 
-const run = command => {
+const run = (command: string) => {
   const loading = ora('').start()
   shell.exec(command)
   loading.succeed('command finished')

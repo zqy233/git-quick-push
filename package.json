@@ -1,6 +1,6 @@
 {
   "name": "git-quick-push",
-  "version": "1.0.26",
+  "version": "1.0.25",
   "description": "node script for git commands",
   "author": "zhuzhuxiaggboy",
   "private": false,
@@ -29,7 +29,6 @@
     "figlet": "^1.5.2",
     "inquirer": "^9.1.4",
     "ora": "^6.1.2",
-    "shell": "^0.5.1",
     "shelljs": "^0.8.4"
   },
   "keywords": [
@@ -38,6 +37,10 @@
     "node"
   ],
   "devDependencies": {
+    "@types/figlet": "^1.5.5",
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.14.4",
+    "@types/shelljs": "^0.8.11",
     "unbuild": "^1.1.2"
   }
 }

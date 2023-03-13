@@ -46,7 +46,7 @@ const gitCommit = async () => {
     },
   ])
   shell.exec('git add .')
-  run(`git commit -m "${emojiArr[commitArr.indexOf(type)]}${input ? type + input : type}"`)
+  run(`git commit -m "${emojiArr[commitArr.indexOf(type)]}${input ? type + ' ' + input : type}"`)
 }
 
 const gitRemote = async () => {

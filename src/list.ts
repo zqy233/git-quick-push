@@ -46,7 +46,7 @@ const gitCommit = async () => {
     },
   ])
   shell.exec('git add .')
-  run(`git commit -m "${emojiArr[commitArr.indexOf(type)]}${input ? type + ': ' + input : type}"`)
+  run(`git commit -m "${emojiArr[commitArr.indexOf(type)]}${input ? type + input : type}"`)
 }
 
 const gitRemote = async () => {
@@ -110,16 +110,7 @@ const list = async () => {
       type: 'list',
       name: 'git',
       message: lolcat.fromString('please choose git commands'),
-      choices: [
-        'git init',
-        'git branch',
-        'git checkout',
-        'git remote',
-        'git commit',
-        'git pull',
-        'git push',
-        'git merge',
-      ],
+      choices: ['git init', 'git branch', 'git checkout', 'git remote', 'git commit', 'git pull', 'git push', 'git merge'],
     },
   ])
   if (!shell.which('git')) {

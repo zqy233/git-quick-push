@@ -8,22 +8,11 @@
 >
 > https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit
 
-| emoji | emoji 代码   | commit                                  |
-| ----- | ------------ | --------------------------------------- |
-| 🎉     | `:tada:`     | first commit :                          |
-| ✨     | `:sparkles:` | A new feature                           |
-| 🐛     | `:bug:`      | fix bug :                               |
-| 💄     | `:lipstick:` | update ui and style files :             |
-| 🔥     | `:fire:`     | remove code or file :                   |
-| 🎨     | `:art:`      | improve code structure or code format : |
-| ⚡     | `:zap:`      | improve performance :                   |
-| 📝     | `:memo:`     | document writing :                      |
-
-Use `chore:`  instead of `build:`
+使用`chore:`取代angular中的`build:` ，并且使用`:wrench:` emoji
 
 | emoji                 | emoji 代码              | commit message | 含义                           |
 | --------------------- | ----------------------- | -------------- | ------------------------------ |
-| :art:                 | `:art:`                 | chore:         | 影响打包系统或外部依赖项的更改 |
+| :wrench:              | `:wrench:`              | chore:         | 影响打包系统或外部依赖项的更改 |
 | :construction_worker: | `:construction_worker:` | ci:            | 对CI配置文件和脚本的更改       |
 | 📝                     | `:memo:`                | docs:          | 文档更改                       |
 | ✨                     | `:sparkles:`            | feat:          | 新特性                         |
@@ -32,6 +21,7 @@ Use `chore:`  instead of `build:`
 | 🔥                     | `:fire:`                | refactor:      | 代码重构，比如变量重命名       |
 | :white_check_mark:    | `:white_check_mark:`    | test:          | 测试文件更改                   |
 | 💄                     | `:lipstick:`            | ui:            | 更新前端css样式                |
+| :art:                 | `:art:`                 | style:         | 更改代码格式                   |
 | :bookmark:            | `:bookmark:`            | release:       | 发布版本                       |
 
 ## 用法
@@ -43,6 +33,8 @@ npm i -g git-quick-push
 ```bash
 git-push list
 ```
+
+在选择了 `git commit`项后, 会显示支持的commit message前缀列表，选择即可
 
 ## 注意
 

@@ -1,6 +1,6 @@
 const choices = [
   {
-    emoji: ':art:',
+    emoji: ':wrench:',
     commit: 'chore:',
   },
   {
@@ -34,6 +34,10 @@ const choices = [
   {
     emoji: ':lipstick:',
     commit: 'ui:',
+  },
+  {
+    emoji: ':art:',
+    commit: 'style:',
   },
   {
     emoji: ':bookmark:',

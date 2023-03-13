@@ -1,17 +1,27 @@
 ## EN | [中文](https://github.com/zqy233/git-quick-push/blob/master/README-CN.md)
 
-> [Node.js](https://nodejs.org/en/) script for git commit, add emoji specification prefix to git commit message
+> > Node.js script for git commit, add emoji specification prefix to git commit message
+>
+> Combination of the two:
+>
+> https://gitmoji.dev/
+>
+> https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit
 
-| emoji | emoji        | commit message                          |
-| ----- | ------------ | --------------------------------------- |
-| 🎉    | `:tada:`     | first commit :                          |
-| ✨    | `:sparkles:` | new feature :                           |
-| 🐛    | `:bug:`      | fix bug :                               |
-| 💄    | `:lipstick:` | update ui and style files :             |
-| 🔥    | `:fire:`     | remove code or file :                   |
-| 🎨    | `:art:`      | improve code structure or code format : |
-| ⚡    | `:zap:`      | improve performance :                   |
-| 📝    | `:memo:`     | document writing :                      |
+Use `chore:`  instead of `build:`
+
+| emoji | emoji        | commit message                          | mean                   |
+| ----- | ------------ | --------------------------------------- | ----- |
+| :art: | `:art:` | chore:         | Changes that affect the build system or external dependencies |
+| :construction_worker: | `:construction_worker:` | ci: | Changes to our CI configuration files and scripts |
+| 📝 | `:memo:` | docs: | Documentation only changes |
+| ✨ | `:sparkles:` | feat: | A new feature |
+| 🐛    | `:bug:`      | fix:                              | A bug fix |
+| ⚡ | `:zap:` | perf: | A code change that improves performance |
+| 🔥 | `:fire:` | refactor: | A code change that neither fixes a bug nor adds a feature , e.g. renaming a variable |
+| :white_check_mark: | `:white_check_mark:` | test: | Adding missing tests or correcting existing tests |
+| 💄    | `:lipstick:` | ui:       | Add or update the UI and style files |
+| :bookmark: | `:bookmark:` | release: | Release / Version tags. |
 
 ## Usage
 

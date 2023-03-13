@@ -1,36 +1,44 @@
 const choices = [
   {
-    emoji: ":tada:",
-    commit: "first commit "
+    emoji: ':art:',
+    commit: 'chore:',
   },
   {
-    emoji: ":sparkles:",
-    commit: "new feature "
+    emoji: ':construction_worker:',
+    commit: 'ci:',
   },
   {
-    emoji: ":bug:",
-    commit: "fix bug "
+    emoji: ':memo:',
+    commit: 'docs:',
   },
   {
-    emoji: ":lipstick:",
-    commit: "update ui and style files "
+    emoji: ':sparkles:',
+    commit: 'feat:',
   },
   {
-    emoji: ":fire:",
-    commit: "remove code or file "
+    emoji: ':bug:',
+    commit: 'fix:',
   },
   {
-    emoji: ":art:",
-    commit: "improve code structure or code format "
+    emoji: ':zap:',
+    commit: 'perf:',
   },
   {
-    emoji: ":zap:",
-    commit: "improve performance "
+    emoji: ':fire:',
+    commit: 'refactor:',
   },
   {
-    emoji: ":memo:",
-    commit: "document writing "
-  }
+    emoji: ':white_check_mark:',
+    commit: 'test:',
+  },
+  {
+    emoji: ':lipstick:',
+    commit: 'ui:',
+  },
+  {
+    emoji: ':bookmark:',
+    commit: 'release:',
+  },
 ]
 const emojiArr = choices.map(item => item.emoji)
 const commitArr = choices.map(item => item.commit)
